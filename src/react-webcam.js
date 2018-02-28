@@ -208,13 +208,13 @@ export default class Webcam extends Component {
     return (
       <video
         autoPlay
+        ref={ref => this.video = ref}
         width={this.props.width}
         height={this.props.height}
         src={this.state.src}
         muted={this.props.muted}
         className={this.props.className}
         style={this.props.style}
-        ref={ref => this.video = ref}
       />
     );
   }
